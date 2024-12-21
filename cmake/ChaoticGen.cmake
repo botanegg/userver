@@ -28,7 +28,7 @@ function(_userver_prepare_chaotic)
   find_program(CLANG_FORMAT_BIN clang-format)
   message(STATUS "Found clang-format: ${CLANG_FORMAT_BIN}")
   set_property(GLOBAL PROPERTY userver_clang_format_bin "${CLANG_FORMAT_BIN}")
-  option(USERVER_CHAOTIC_FORMAT ON "Whether to format generated code")
+  option(USERVER_CHAOTIC_FORMAT "Whether to format generated code" ON)
 
   if(NOT USERVER_CHAOTIC_SCRIPTS_PATH)
     get_filename_component(USERVER_DIR "${CMAKE_CURRENT_LIST_DIR}" DIRECTORY)
